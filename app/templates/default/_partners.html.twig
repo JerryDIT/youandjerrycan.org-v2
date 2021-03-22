@@ -1,0 +1,24 @@
+
+<div class="fund-raisers">
+    <div class="container">
+        <div class="row mb-3 justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>JerryClan's partners</h2>
+            </div>
+        </div>
+        <div class="row">
+            {% for member in members %}
+                <div class="col-md-3 col-lg-3 col-6 mb-5">
+                    <div class="person-donate text-center">
+                        <img src="{{ asset('build/img/team/' ~ member.img) }}" alt="Image placeholder" class="img-fluid">
+                        <div class="donate-info">
+                            <h2>{{ member.firstname }} {{ member.lastname }}</h2>
+                            <span class="time d-block mb-3">{{ member.jobTitle }}</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div> <!-- .section -->

@@ -1,0 +1,19 @@
+<div class="site-section border-top">
+    <div class="container">
+        <div class="row">
+
+            {% for manifestoElement in manifestoElements %}
+                <div class="col-md-6 mt-5">
+                    <div class="media block-6">
+                        <div class="icon"><span class="{{ manifestoElement.icon }}"></span></div>
+                        <div class="media-body">
+                            <h3 class="heading">{{ manifestoElement.title }}</h3>
+                            <p>{{ manifestoElement.description|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div> <!-- .site-section -->

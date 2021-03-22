@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=!ChangeMe!
+      - MYSQL_USER=crypto
+      - MYSQL_PASSWORD=!ChangeMe-crypto!
+      - MYSQL_DATABASE=crypto
+    volumes:
+      - ./.data/mysql:/var/lib/mysql:rw
+      - ./docker/mysql/conf.d:/etc/mysql/conf.d:rw
+    ports:
+      - 3307:3306
+
+  php:
+    build: docker/php
+    ports:
+      - 9000:9000
+    links:
+      - db:mysqldb
+    volumes:
+      - ./app:/var/www/symfony
+      - ./logs/symfony:/var/www/symfony/var/log
+
+  nginx:
+    build: docker/nginx
+    ports:
+      - 80:80
+    links:
+      - php
+    volumes:
+      - ./app:/var/www/symfony
+      - ./logs/nginx:/var/log/nginx
+
+  php-qa:
+      image: jakzal/phpqa:php7.4-alpine
+      working_dir: /project
+      volumes:
+          - ./app:/project

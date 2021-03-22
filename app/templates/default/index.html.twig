@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+
+
+    <div class="block-31" style="position: relative;">
+        <div class="owl-carousel loop-block-31 ">
+            <div class="block-30 block-30-sm item" style="background-image: url({{ asset('build/img/background-2.jpg') }});" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-7">
+                            <h1 class="heading mb-5">Jerry do it together !</h1>
+                            <p style="display: inline-block;">
+                                <a href="https://www.youtube.com/embed/HoteFr2C2Q8"  data-fancybox class="ftco-play-video d-flex">
+                                    <span class="play-icon-wrap align-self-center mr-4">
+                                        <span class="ion-ios-play"></span>
+                                    </span>
+                                    <span class="align-self-center">Watch Video</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-section section-counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 pr-5">
+                    <div class="block-48">
+                        <span class="block-48-text-1">Served Over</span>
+                        <div class="block-48-counter ftco-number" data-number="1321901">0</div>
+                        <span class="block-48-text-1 mb-4 d-block">Children in 150 Countries</span>
+                        <p class="mb-0"><a href="#" class="btn btn-white px-3 py-2">View Our Program</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 welcome-text">
+                    <h2 class="display-4 mb-3">Who Are We?</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, harum, id. Aut beatae culpa cum distinctio numquam odio provident qui suscipit unde ut! Amet eligendi harum iusto laboriosam nihil perspiciatis.</p>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dicta dolore explicabo necessitatibus nobis numquam quis similique! Ad alias architecto doloremque, excepturi ipsum minus nemo neque perspiciatis sunt veniam.</p>
+                    <p class="mb-0"><a href="#" class="btn btn-primary px-3 py-2">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include('default/_manifesto.html.twig') %}
+
+
+    {% include('default/_gallery.html.twig') %}
+    {% include('default/_team.html.twig') %}
+    {% include('default/_partners.html.twig') %}
+
+    <div class="featured-section overlay-color-2" style="background-image: url('images/bg_3.jpg');">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <img src="{{ 'build/img/jerryclans-2013-10.png' }}" alt="Image placeholder" class="img-fluid">
+                </div>
+
+                <div class="col-md-6 pl-md-5">
+                    <span class="featured-text d-block mb-3">JerryClan hotspots</span>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aperiam, at cum dolor doloremque dolorum expedita facere, harum in incidunt ipsum iste magnam molestias optio quae sed, tempora tempore?</span>
+
+                    <p><a href="#" class="btn btn-success btn-hover-white py-3 px-5">Read The Full Story</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div> <!-- .featured-donate -->
+
+    {% include('default/_questions.html.twig') %}
+
+    <div class="featured-section overlay-color-2" style="background-image: url('../img/bg_2.jpg');">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <img src="images/bg_2.jpg" alt="Image placeholder" class="img-fluid">
+                </div>
+
+                <div class="col-md-6 pl-md-5">
+
+                    <div class="form-volunteer">
+
+                        <h2>Be A Volunteer Today</h2>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <!-- <label for="name">Name</label> -->
+                                <input type="text" class="form-control py-2" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="email">Email</label> -->
+                                <input type="text" class="form-control py-2" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="v_message">Email</label> -->
+                                <textarea name="v_message" id="" cols="30" rows="3" class="form-control py-2" placeholder="Write your message"></textarea>
+                                <!-- <input type="text" class="form-control py-2" id="email"> -->
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-white px-5 py-2" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div> <!-- .featured-donate -->
+</div>
+{% endblock %}

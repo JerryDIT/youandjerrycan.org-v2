@@ -1,0 +1,13 @@
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12 mb-5"><h1>Frequently Asked Questions</h1></div>
+            {% for question in questions %}
+                <div class="col-md-6">
+                    <p class="lead">{{ question.title|raw }}</p>
+                    <p>{{ question.answer|raw }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
