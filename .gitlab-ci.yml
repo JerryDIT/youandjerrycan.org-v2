@@ -1,0 +1,17 @@
+image: alpine:latest
+
+stages:
+    - deploy
+        
+image: alpine:latest
+
+
+deploy_prod:
+    stage: deploy
+    environment:
+        name: production
+        url: https://www.covinfo.fr
+    only:
+        - master
+    script:
+        - echo ":)"

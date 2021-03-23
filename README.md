@@ -1,16 +1,32 @@
 # youandjerrycan.org-v2
 
-## Installation
+[youandjerrycan.org](https://youandjerrycan.org) is a website.
 
-### Required
+## Contributing :
+youandjerrycan.org is an Open Source.
+Join us contributing code or contributing documentation.
+
+
+## Required :
 
 You need to install thoses tools :
-- Docker
-- Docker-compose
+- Docker (https://docs.docker.com/engine/install/)
+- Docker-compose (https://docs.docker.com/compose/install/)
 
-### Creation of the necessary images
 
+## Installation :
+
+1. Build docker images
 > docker-compose build
 
-### Launch navigator
-https://localhost
+
+
+## Development :
+
+1. Launch services
+> docker-compose up
+
+### Interface
+
+Launch the navigator
+> http://localhost
